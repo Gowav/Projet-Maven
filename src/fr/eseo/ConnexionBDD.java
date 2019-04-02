@@ -19,7 +19,7 @@ public class ConnexionBDD {
 			ResultSet res = stat.executeQuery("SELECT * FROM ville_france ");
 			/*ResultSet res = stat.executeQuery("SELECT * FROM ville_france WHERE Code_postal LIKE '49%'");*/
 			System.out.println("Code_commune_INSEE - Nom_commune - Code_postal - Libelle_acheminement - Ligne_5 - Lattitude - Longitude");
-			//System.out.println("****************************************************************************************************************");
+			System.out.println("****************************************************************************************************************");
 			while(res.next())
 				System.out.println(res.getInt(1)+" - "+res.getString(2)+" - "+res.getInt(3)+" - "+res.getString(4)+" - "+res.getString(5)+" - "+res.getFloat(6)+" - "+res.getFloat(7));
 			
