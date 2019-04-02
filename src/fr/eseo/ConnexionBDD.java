@@ -7,6 +7,7 @@ import java.sql.SQLException;
 
 public class ConnexionBDD {
 
+	//test
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String url = "jdbc:mysql://localhost:3308/maven?user=somanager&password=network&useSSL=false";
