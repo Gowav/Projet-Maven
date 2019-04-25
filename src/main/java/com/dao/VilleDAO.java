@@ -81,11 +81,7 @@ public class VilleDAO  extends DAO<Ville>{
 			String req = "UPDATE `ville_france` SET ";
 			
 			if(objet.getCodeCommuneINSEE()!=null) {
-				if(!firstParam) {
-					req += ", ";
-				}else {
-					firstParam=false;
-				}
+				firstParam=false;
 				req += "code_commune_INSEE='"+objet.getCodeCommuneINSEE()+"'";
 			}
 			if(objet.getNomCommune()!=null) {
