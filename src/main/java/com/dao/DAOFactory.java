@@ -225,14 +225,15 @@ public class DAOFactory {
 	/**
 	 * 
 	 * @return
-	 * @throws ClassNotFoundException 
 	 */
-	public boolean testConnexion() throws ClassNotFoundException
+	public boolean testConnexion()
 	{
 		try { 
 			Class.forName(this.driver); 
 			DriverManager.getConnection(url, nomUtilisateur, motDePasse); 
-		} catch ( SQLException e) { 
+		}catch (ClassNotFoundException e) { 
+			return false;
+		}catch (SQLException e) { 
 			return false;
 		}
 		return true;
@@ -252,7 +253,9 @@ public class DAOFactory {
 		try { 
 			Class.forName(driver); 
 			DriverManager.getConnection(url, nomUtilisateur, motDePasse); 
-		} catch ( SQLException e) { 
+		}catch (ClassNotFoundException e) { 
+			return false;
+		}catch (SQLException e) { 
 			return false;
 		}
 		return true;
